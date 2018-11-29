@@ -38,10 +38,10 @@ final class Article
     /**
      * Article constructor.
      *
-     * @param int       $id
-     * @param string    $title
-     * @param string    $body
-     * @param \DateTime $creationDate
+     * @param int                $id
+     * @param string             $title
+     * @param string             $body
+     * @param \DateTimeImmutable $creationDate
      */
     public function __construct(int $id, string $title, string $body, \DateTimeImmutable $creationDate)
     {
@@ -78,7 +78,7 @@ final class Article
     /**
      * @return string
      */
-    public function getCreationDate(): string
+    public function getCreationDate(): \DateTimeImmutable
     {
         return $this->creationDate;
     }
