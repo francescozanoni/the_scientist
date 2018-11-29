@@ -34,6 +34,6 @@ class TitleTest extends TestCase
     {
         $this->expectException(TitleTooShort::class);
 
-        $title = new Title('adsfs');
+        new Title('adsfs');
     }
 }
