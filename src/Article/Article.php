@@ -10,6 +10,8 @@ declare(strict_types=1);
 
 namespace LaravelDay\Article;
 
+use LaravelDay\Article\ValueObject\Title;
+
 /**
  * Class Article.
  */
@@ -21,7 +23,7 @@ final class Article
     private $id;
 
     /**
-     * @var string
+     * @var Title
      */
     private $title;
 
@@ -39,11 +41,11 @@ final class Article
      * Article constructor.
      *
      * @param int                $id
-     * @param string             $title
+     * @param Title              $title
      * @param string             $body
      * @param \DateTimeImmutable $creationDate
      */
-    public function __construct(int $id, string $title, string $body, \DateTimeImmutable $creationDate)
+    public function __construct(int $id, Title $title, string $body, \DateTimeImmutable $creationDate)
     {
         $this->id = $id;
         $this->title = $title;
@@ -60,9 +62,9 @@ final class Article
     }
 
     /**
-     * @return string
+     * @return Title
      */
-    public function getTitle(): string
+    public function getTitle(): Title
     {
         return $this->title;
     }
@@ -76,7 +78,7 @@ final class Article
     }
 
     /**
-     * @return string
+     * @return \DateTimeImmutable
      */
     public function getCreationDate(): \DateTimeImmutable
     {

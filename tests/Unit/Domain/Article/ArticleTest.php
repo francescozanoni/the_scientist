@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests\Unit\Domain\Article;
 
 use LaravelDay\Article\Article;
+use LaravelDay\Article\ValueObject\Title;
 use Tests\TestCase;
 
 class ArticleTest extends TestCase
@@ -17,7 +18,7 @@ class ArticleTest extends TestCase
     public function shouldCreateAnArticle()
     {
         $id = 1;
-        $title = 'MY TITLE';
+        $title = new Title('MY zsfdvdzbvf dfda fd fds f');
         $body = 'MY BODY';
         $creationDate = new \DateTimeImmutable();
 
